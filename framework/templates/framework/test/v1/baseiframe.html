@@ -1,0 +1,45 @@
+<html>
+  <head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<meta name="description" content="">
+	<meta name="author" content="">	  
+    </head>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link href="/static/v1/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+        {% block css %}
+                    <link href="/static/v1/iframe/test.css" rel="stylesheet">    
+        {% endblock %}  
+  
+    <body>
+	    <div id="textbox">
+            <form class="form-inline">
+                <div class="form-group">
+                   <span>Select Link ID :</span> 
+                    <span id="currentID">{{link_id}}</span>
+                  </div>
+                  <div class="form-group">
+                  
+                    <span>Time Period:</span>
+                    <select id="intervalpicker" class="form-control"></select>
+                  </div>
+                  
+                  <button id="Fit" type="button" class="btn btn-primary">Fit</button>
+            </form>
+        </div>
+        <div id="image"> </div>
+  	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>		
+	<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+	<script src="/static/v1/lib/jquery/jquery.ui.touch-punch.min.js"></script>
+	<script src="/static/v1/lib/bootstrap/js/bootstrap.min.js"></script>
+	<script src="/static/v1/lib/d3/d3.min.js"></script>
+	       <!--the library below is to be loaded for specific apps-->
+    {% block js %}
+    <script src="/static/v1/test/time.js"></script>
+    <script src="/static/v1/iframe/initial.js"></script>
+    {% endblock %}
+	
+  </body>
+</html>

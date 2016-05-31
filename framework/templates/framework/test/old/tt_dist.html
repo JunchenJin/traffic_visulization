@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block css %}
+<link href="/static/tt_dist/tt_dist.css" rel="stylesheet"> 
+<link href="https://gitcdn.github.io/bootstrap-toggle/2.2.0/css/bootstrap-toggle.min.css" rel="stylesheet">
+<link rel="stylesheet" href="/static/routing/leaflet-routing-machine.css" />
+{% endblock %}
+{% block content %}
+<div id="LR-map-canvas"></div>
+
+<div id="LR-chart-canvas">     
+
+	<div>	
+		<!--<h2>Travel time estimation</h2><br>-->
+		<!--<h3>Link ID: <span id="link_id"></span></h3>-->
+		<h3>Time: <span id="time"></span></h3>
+		<div id="time-slider" class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all">       
+		</div>
+	</div>
+</div>
+<div id="histogram">
+</div>
+{% endblock %}
+
+{% block js %}
+		<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+		<script src="/static/tt_dist/tt_dist.js"></script>
+		<script src="http://d3js.org/d3.v3.min.js"></script>
+		<script src="/static/tt_dist/slider.js"></script>
+{% endblock %}

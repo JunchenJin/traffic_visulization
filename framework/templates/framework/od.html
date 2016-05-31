@@ -1,0 +1,38 @@
+{% extends "framework/base.html" %}
+{% load static from staticfiles %}
+{% block css %}
+<link href="{% static "/static/framework/od/od.css" %}" rel="stylesheet"> 
+<link href="{% static "/static/lib/bootstrap-toggle-master/css/bootstrap-toggle.min.css" %}" rel="stylesheet">
+<link href="{% static "/static/lib/c3/c3.min.css" %}" rel="stylesheet">
+<link href="{% static "/static/lib/timepicker/jquery-ui-timepicker-addon.css"%}" rel="stylesheet">
+{% endblock %}
+{% block menu %}
+{% include "framework/single-menu.html" %}
+{% endblock %}
+{% block footer %}  
+        <form id="form" class="form-inline">
+          <div class="form-group">
+              <label>
+                  <input id="pickcheck" type="checkbox"> Pick a location:
+              </label>
+              <input id="od-trigger" type="checkbox" checked disabled data-toggle="toggle" data-on="O" data-off="D" data-onstyle="success" data-offstyle="warning">  
+          </div>
+          <div class="form-group">
+              <button id="search" type="button" class="btn btn-default ">Search</button>
+              <button  id="clear" type="button" class="btn btn-default">Clear</button>
+          </div>
+        </form>
+{% endblock %}
+
+{% block js %}
+    <script src="{% static "/static/lib/timepicker/jquery-ui-timepicker-addon.js" %}"></script>
+    <script src="{% static "/static/lib/timepicker/jquery-ui-timepicker-addon-i18n.min.js" %}"></script>
+    <script src="{% static "/static/lib/timepicker/jquery-ui-sliderAccess.js" %}"></script>
+    <script src="{% static "/static/framework/od/initial.js" %}"></script>
+    <script src="{% static "/static/framework/od/mapconfig.js" %}"></script>
+    <script src="{% static "/static/framework/od/button.js" %}"></script>
+    <script src="{% static "/static/lib/bootstrap-toggle-master/js/bootstrap-toggle.min.js" %}"></script>
+    <script src="{% static "/static/lib/c3/c3.min.js" %}"></script>
+    <script src="{% static "/static/framework/od/linechart.js" %}"></script>
+    <script src="{% static "/static/framework/od/histogram.js" %}"></script>
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block css %}
+<link href="/static/od/od.css" rel="stylesheet"> 
+<link href="https://gitcdn.github.io/bootstrap-toggle/2.2.0/css/bootstrap-toggle.min.css" rel="stylesheet">
+<link rel="stylesheet" href="/static/routing/leaflet-routing-machine.css" />
+{% endblock %}
+{% block content %}
+<div id="LR-map-canvas"></div>
+<div id="LR-chart-canvas">     
+
+	<div>	
+		<h2>Travel time estimation</h2><br>
+		<div class="checkbox">
+		<label>
+				<input id="pickcheck" type="checkbox"> Pick a location: 
+		</label>
+		<input id="od-trigger" type="checkbox" checked disabled data-toggle="toggle" data-on="O" data-off="D" data-onstyle="success" data-offstyle="warning">
+		</div>
+		<br>
+		<button id="search" class="btn btn-default">Search</button>
+		<button  id="clear" class="btn btn-default">Clear</button>
+		<!--<a class="btn btn-large btn-primary" href="#"><i class="fa fa-search"></i>search</a>-->
+		<!--<a class="btn btn-large btn-primary" href="#"><i class="fa  fa-times"></i>clear</a>-->
+	</div>
+</div>
+<div id="echarts">
+</div>
+{% endblock %}
+
+{% block js %}
+		<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+		<script src="/static/od/od.js"></script>
+		<script src="/static/od/control.js"></script>
+		<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.0/js/bootstrap-toggle.min.js"></script>
+		<script src="/static/routing/leaflet-routing-machine.js"></script>
+		<script src="/static/od/echarts-dist/echarts.js"></script>
+		<script src="/static/od/chart.js"></script>
+{% endblock %}

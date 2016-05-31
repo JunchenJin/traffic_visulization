@@ -1,0 +1,38 @@
+/*
+ * Congestion structure
+ */
+
+/*Menu*/
+#image{
+	position: absolute;
+}
+
+img{
+	 width: 100%
+}
+
+
+/*the text box in menu*/
+#textbox{
+	top: 0;
+	padding:20 20;
+	font-size:1.1em;
+}
+#currentID, #hist-time{
+  font-weight: bold;
+  color:#337ab7;
+}
+
+
+#histogram.toggled{
+  visibility:visible
+}
+div.loading {
+  background: #F3F3F3 url('http://code.jquery.com/mobile/1.3.1/images/ajax-loader.gif') no-repeat 50% 50%;
+  -webkit-transition: background-color 0;
+  transition: background-color 0;
+}
+
+
+
+

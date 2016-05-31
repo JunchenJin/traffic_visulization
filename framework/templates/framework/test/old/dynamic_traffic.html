@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block css %}
+<link href="/static/dynamic_traffic/dynamic_traffic.css" rel="stylesheet">  
+{% endblock %}
+{% block content %}
+<div id="TB-map-canvas"></div>
+<div id="TB-chart-canvas">     
+      <div class="row">
+          <div class="col-sm-2 ctrl-btn" >
+              <!--<button type="button" class="btn btn-default navbar-btn">-->
+              <p id="play-ctrl">
+                <a id="play-pause" href="#"><i id="play-pause-icon" class="fa fa-lg fa-play"></i></a>
+              </p>
+          </div>
+          <div class="col-sm-2">
+              <p id="time-ctrl">
+                <span id="cursor-date"></span>          
+                <span id="cursor-time"></span>                
+               </p>
+          </div>
+          <div class="col-sm-8" id="slider-div"   >
+              <div id="time-slider" class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all">       
+              </div>
+          </div>    
+</div>      
+{% endblock %}
+
+{% block js %}
+		<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+		<script src="/static/dynamic_traffic/dynamic_traffic.js"></script>			
+		
+		<script src="/static/dynamic_traffic/ui/MyPlay.js"></script>
+		<script src="/static/dynamic_traffic/ui/MyControl.js"></script>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block css %}
+<link href="/static/combination/combination.css" rel="stylesheet"> 
+<link href="https://gitcdn.github.io/bootstrap-toggle/2.2.0/css/bootstrap-toggle.min.css" rel="stylesheet">
+<link rel="stylesheet" href="/static/routing/leaflet-routing-machine.css" />
+{% endblock %}
+{% block content %}
+<div id="LR-map-canvas"></div>
+<div id="TB-chart-canvas">
+<h3>Time: <span id="time-congestion"></span></h3>
+<div id="time-slider-congestion" class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all">       
+</div>
+</div>
+<div id="LR-chart-canvas">     
+
+	<div>	
+		<h3>Time: <span id="time"></span></h3>
+		<div id="time-slider" class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all">       
+		</div>
+	</div>
+</div>
+<div id="histogram">
+</div>
+{% endblock %}
+
+{% block js %}
+		<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+		<script src="/static/combination/combination.js"></script>
+		<script src="http://d3js.org/d3.v3.min.js"></script>
+		<script src="/static/combination/sliders_combination.js"></script>
+{% endblock %}

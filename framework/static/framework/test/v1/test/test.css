@@ -1,0 +1,91 @@
+/*
+ * Congestion structure
+ */
+
+/*Time Slider style*/
+#timelabel{
+  float:left;
+}
+#time-slider{
+  float:left;
+  left:20;
+  width:50%;
+  font-size: 1.5em;
+}
+
+/*hint style*/
+#hint{
+  float:left;
+  margin-left: 2em;
+}
+.ui-slider {
+  margin: 2px;
+}
+
+/*Legend style*/
+.legend {
+    line-height: 30px;
+    color: #555;
+}
+.legend i {
+    width: 30px;
+    height: 30px;
+    float: left;
+    margin-right: 8px;
+    opacity: 0.9;
+}
+
+.legend b {
+font-size: medium;
+}
+
+.leaflet-right .leaflet-control{
+    margin-right: 20px;
+    background: rgba(255,255,255,0.8);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    padding:6px 8px;
+}
+
+
+/*Menu*/
+#image{
+	position: absolute;
+	visibility: hidden
+	
+}
+
+.toggled #image{
+	visibility: visible;
+}
+img{
+	 width: 100%
+}
+
+
+
+
+/*the text box in menu*/
+#textbox{
+	top: 0;
+	padding:20 20;
+	font-size:1.1vw;
+}
+#currentID, #hist-time{
+  font-weight: bold;
+  color:#337ab7;
+}
+
+
+#histogram.toggled{
+  visibility:visible
+}
+div.loading {
+  background: #F3F3F3 url('http://code.jquery.com/mobile/1.3.1/images/ajax-loader.gif') no-repeat 50% 50%;
+  -webkit-transition: background-color 0;
+  transition: background-color 0;
+}
+
+
+
+

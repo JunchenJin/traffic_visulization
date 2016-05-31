@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block css %}
+<link href="/static/v1/test/test.css" rel="stylesheet">
+{% endblock %} 
+{% block menu %}
+    <div id="textbox">
+        <form class="form-inline">
+          <div class="form-group">
+           <span>Select Link ID :</span> 
+            <span id="currentID"></span>
+          </div>
+          <div class="form-group">
+            <span style="display:inline-block; width: 20;"></span>
+            <span>Time Period:</span>
+            <select id="intervalpicker" class="form-control"></select>
+          </div>
+          <span style="display:inline-block; width: 20;"></span>
+          <button id="Fit" type="button" class="btn btn-primary">Fit</button>
+        </form>
+    </div>
+    <div id="image"> </div>
+{% endblock %}
+{% block footer %}    
+      <div id="timelabel">
+          <span class="nav-text" >Time period:&nbsp;&nbsp;</span>
+          <span id="time" class="nav-text">
+          </span>
+      </div>
+      <div id="time-slider" class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all">     
+      </div>
+{% endblock %}
+
+{% block js %}
+
+    <script src="/static/v1/test/time.js"></script>
+    <script src="/static/v1/test/customslider.js"></script>
+    
+    <script src="/static/v1/test/loadmap.js"></script>
+    <script src="/static/v1/test/mapconfig.js"></script>
+
+
+    <script src="/static/v1/test/togglemenu.js"></script>
+            <!-- 
+    <script src="/static/v1/congestion/histogram.js"></script>
+    --> 
+{% endblock %}

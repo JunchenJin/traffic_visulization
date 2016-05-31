@@ -1,0 +1,104 @@
+/*
+ * OD
+ */
+
+#footer{
+	padding-top: 8px;
+	padding-bottom:8px;
+}
+
+#timepicker{
+	color: #4787BE;
+	font-weight: 600;
+    font-size: 16px;	
+}
+
+#form>*{
+	margin-right: 20px;
+}
+
+/* Legend */
+
+.leaflet-bar-part{
+padding-top:0.5em;
+}
+
+.legend {
+    line-height: 30px;
+    color: #555;
+}
+
+.leaflet-right .leaflet-control{
+    margin-right: 20px;
+    background: rgba(255,255,255,0.8);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    padding:6px 8px;
+}
+
+.legend i{
+  width: 30px;
+  height: 30px;
+  float: left;
+  margin-right: 8px;
+  opacity: 0.9;
+  }
+
+.legend label{
+	font-size: 15px;
+}
+
+
+
+/* Menu */
+#loader {
+    position:absolute; top:0; bottom:0; width:100%;
+     background: rgba(243, 243, 243, 0.51) url('http://code.jquery.com/mobile/1.3.1/images/ajax-loader.gif') no-repeat 50% 50%;
+  	-webkit-transition: background-color 0;
+  	transition: background-color 0;
+}
+
+#textbox{
+	top: 0;
+	height: 50;
+  	position: absolute;
+	padding:20 20;
+	font-size:1.1vw;
+}
+
+#linechart{
+  top:50;
+  width:0;
+  position: absolute!important;
+  right: 0;
+  bottom: 0;
+  visibility:hidden
+}
+#linechart.toggled{
+  visibility:visible;
+  width:100%;
+  padding: 0 20 0 20;
+}
+
+
+.c3-axis-x{
+	font-size: 1.0vw;
+}
+
+.c3-axis-y{
+	font-size: 0.8vw;
+}
+
+
+.oid
+{
+color: #31a354;
+    text-shadow: 1px 1px 1px #ccc;
+}
+
+.did
+{
+color: #eea236;
+    text-shadow: 1px 1px 1px #ccc;
+}
+

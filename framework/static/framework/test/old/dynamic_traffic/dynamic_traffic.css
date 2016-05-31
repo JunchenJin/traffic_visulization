@@ -1,0 +1,60 @@
+#TB-map-canvas{
+  width:100%;
+  height:90%;
+  position:absolute;
+  top:0;
+}
+
+#TB-chart-canvas{
+  width:100%;
+  height:10%;
+  position:absolute;
+  padding: 10px;
+  bottom:0;
+}
+
+
+#play-ctrl{
+margin-bottom:0;
+margin-top:1em;
+}
+#time-ctrl{
+margin-bottom:0;
+margin-top:0.7em;
+font-size:16px;
+}
+
+#slider-div{
+margin-top:1em;
+}
+
+.ctrl-btn{
+left:8%;
+}
+
+.legend {
+    line-height: 30px;
+    color: #555;
+}
+.legend i {
+    width: 30px;
+    height: 30px;
+    float: left;
+    margin-right: 8px;
+    opacity: 0.9;
+}
+
+
+.legend b {
+font-size: medium;
+}
+
+
+
+.leaflet-right .leaflet-control{
+    margin-right: 20px;
+    background: rgba(255,255,255,0.8);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    padding:6px 8px;
+}

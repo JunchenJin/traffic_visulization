@@ -1,0 +1,35 @@
+{% extends "framework/base.html" %}
+{% load static from staticfiles %}
+{% block css %}
+<link href="{% static "/static/framework/congestion/congestion.css" %}" rel="stylesheet">
+{% endblock %}  
+ 
+{% block menu %}
+        <div id="textbox">
+            Link ID:  <span id="currentID"></span>
+            <span style="display:inline-block; width: 20;"></span>
+            Time Period:  <span id="hist-time"></span>
+        </div>
+        <div id="histsliderbox">
+            <div id="hist-slider">
+            </div>
+        </div>
+        <div id="histogram">
+        </div>
+{% endblock %}
+{% block footer %}  
+      <div id="timelabel">
+          <span class="nav-text" >Time period:&nbsp;&nbsp;</span>
+          <span id="time" class="nav-text">
+          </span>
+      </div>
+      <div id="time-slider" class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all">     
+      </div>
+{% endblock %}
+
+{% block js %}
+    <script src="{% static "/static/framework/congestion/slider.js" %}"></script>
+    <script src="{% static "/static/framework/congestion/initial.js" %}"></script>
+    <script src="{% static "/static/framework/congestion/mapconfig.js" %}"></script>
+    <script src="{% static "/static/framework/congestion/histogram.js" %}"></script>
+{% endblock %}

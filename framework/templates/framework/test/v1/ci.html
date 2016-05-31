@@ -1,0 +1,38 @@
+{% extends "v1/test.html" %}
+{% block css %}
+<link href="/static/v1/congestion/congestion.css" rel="stylesheet">
+{% endblock %}  
+ 
+{% block menu %}
+<div id="textbox">
+    Link ID: <span id="currentID"></span>
+    <span style="display:inline-block; width: 20;"></span>
+    Time Period: <span id="hist-time"></span>
+</div>
+<div id="histsliderbox">
+    <div id="hist-slider"></div>
+</div>
+<div id="histogram"></div>       
+{% endblock %}
+{% block footer %}    
+      <div id="timelabel">
+          <span class="nav-text" >Time period:&nbsp;&nbsp;</span>
+          <span id="time" class="nav-text">
+          </span>
+      </div>
+      <div id="time-slider" class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all">     
+      </div>
+      <!-- <div id="hint" class="nav-text">
+          Hint: click a link to show travel time distribution
+      </div> -->
+{% endblock %}
+{% block js %}
+
+    <script src="/static/v1/test/time.js"></script>
+    <script src="/static/v1/test/customslider.js"></script>
+    <script src="/static/v1/ci/congestionconfig.js"></script>
+    <script src="/static/v1/ci/legend.js"></script>
+    <script src="/static/v1/ci/histogram.js"></script>
+    <script src="/static/v1/ci/mapconfig.js"></script>
+    <script src="/static/v1/ci/loadmap.js"></script>
+{% endblock %}

@@ -1,0 +1,47 @@
+{% extends "v1/base.html" %}
+{% block css %}
+<link href="/static/v1/od/od.css" rel="stylesheet"> 
+<link href="/static/v1/lib/bootstrap-toggle-master/css/bootstrap-toggle.min.css" rel="stylesheet">
+<link href="/static/v1/lib/c3/c3.min.css" rel="stylesheet" type="text/css">
+<link href="/static/v1/lib/timepicker/jquery-ui-timepicker-addon.css" rel="stylesheet" type="text/css">
+{% endblock %}
+{% block menu %}
+        <div id="textbox">
+            Path length:  <span id="length"></span>
+        </div>
+        <div id="linechart">
+        </div>
+{% endblock %}
+{% block footer %}  
+        <form id="form" class="form-inline">
+          <div class="form-group">
+              <label>
+                  <input id="pickcheck" type="checkbox"> Pick a location:
+              </label>
+              <input id="od-trigger" type="checkbox" checked disabled data-toggle="toggle" data-on="O" data-off="D" data-onstyle="success" data-offstyle="warning">  
+          </div>
+          <div class="form-group">
+              <label>
+                        Select arrival time:
+                </label>
+                <input id="timepicker" type="text" class="form-control">
+          </div>
+          <button id="search" type="button" class="btn btn-default ">Search</button>
+          <button  id="clear" type="button" class="btn btn-default">Clear</button>
+        </form>
+{% endblock %}
+
+{% block js %}
+    <script src="/static/v1/lib/timepicker/jquery-ui-timepicker-addon.js"></script>
+    <script src="/static/v1/lib/timepicker/jquery-ui-timepicker-addon-i18n.min.js"></script>
+    <script src="/static/v1/lib/timepicker/jquery-ui-sliderAccess.js"></script>
+    <script src="/static/v1/od/initial.js"></script>
+    <script src="/static/v1/od/togglemenu.js"></script>
+    <script src="/static/v1/od/mapconfig.js"></script>
+    <script src="/static/v1/od/button.js"></script>
+    <script src="/static/v1/lib/bootstrap-toggle-master/js/bootstrap-toggle.min.js"></script>
+
+    
+    <script src="/static/v1/lib/c3/c3.min.js"></script>
+    <script src="/static/v1/od/linechart.js"></script>
+{% endblock %}

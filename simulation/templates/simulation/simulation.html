@@ -1,0 +1,22 @@
+{% extends "simulation/base.html" %}
+{% load staticfiles %}
+{% block css %}
+<link href="{% static "/static/lib/bootstrap-timepicker/bootstrap-timepicker.min.css" %}" rel="stylesheet">
+<link href="http://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.0/leaflet.awesome-markers.css" rel="stylesheet" type="text/css" />
+<link href="{% static "/static/simulation/simulation.css" %}" rel="stylesheet">
+{% endblock %}   
+{% block menu %}
+{% endblock %}
+{% block footer %}
+<div id="footer-container">
+</div>
+{% endblock %}
+
+{% block js %}
+    <script src="{% static "/static/lib/bootstrap-timepicker/bootstrap-timepicker.min.js" %}"></script>    
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.0/leaflet.awesome-markers.js"></script>
+    <script src="{% static "/static/simulation/LeafletPlaybackV2.js" %}"></script>
+    <script src="{% static "/static/simulation/data.js" %}"></script>
+    <script src="{% static "/static/simulation/control.js" %}"></script>
+    <script src="{% static "/static/simulation/initial.js" %}"></script>
+{% endblock %}

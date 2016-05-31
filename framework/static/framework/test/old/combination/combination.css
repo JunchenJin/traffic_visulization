@@ -1,0 +1,88 @@
+#LR-map-canvas{
+  width:50%;
+  height:80%;
+  position:absolute;
+  left:0;
+  bottom:0;
+}
+#TB-chart-canvas{
+  width: 50%;
+  height: 20%;
+  position: absolute;
+  padding: 10px;
+  left: 0;
+}
+
+#LR-chart-canvas{
+  width:50%;
+  height:20%;
+  position:absolute;
+  padding: 10px;
+  right:0;
+}
+
+#histogram{
+  width:50%;
+  height:80%;
+  position:absolute;
+  right:0;
+  bottom:0;
+}
+
+
+.bar rect {
+  fill: steelblue;
+  shape-rendering: crispEdges;
+}
+
+.bar text {
+  fill: #fff;
+}
+
+.axis path, .axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+
+.leaflet-bar-part{
+padding-top:0.5em;
+}
+.x_label,.y_label{
+  font-size: initial;
+}
+
+div.loading {
+  background: #F3F3F3 url('http://code.jquery.com/mobile/1.3.1/images/ajax-loader.gif') no-repeat 50% 50%;
+  -webkit-transition: background-color 0;
+  transition: background-color 0;
+}
+
+
+.legend {
+    line-height: 30px;
+    color: #555;
+}
+.legend i {
+    width: 30px;
+    height: 30px;
+    float: left;
+    margin-right: 8px;
+    opacity: 0.9;
+}
+
+
+.legend b {
+font-size: medium;
+}
+
+
+
+.leaflet-right .leaflet-control{
+    margin-right: 20px;
+    background: rgba(255,255,255,0.8);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    padding:6px 8px;
+}

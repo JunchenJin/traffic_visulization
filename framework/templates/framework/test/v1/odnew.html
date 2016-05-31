@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+{% block css %}
+<link href="/static/v1/odnew/odnew.css" rel="stylesheet"> 
+<link href="/static/v1/lib/bootstrap-toggle-master/css/bootstrap-toggle.min.css" rel="stylesheet">
+<link href="/static/v1/lib/c3/c3.min.css" rel="stylesheet" type="text/css">
+<link href="/static/v1/lib/timepicker/jquery-ui-timepicker-addon.css" rel="stylesheet" type="text/css">
+{% endblock %}
+{% block menu %}
+<div id="menu-container">
+    <div id="content">
+        <ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
+            <li class="active">
+                <a href="#tab1" class="tabtitle" data-toggle="tab">Route travel time distribution</a>
+            </li>
+            <li>
+                <a href="#tab2" class="tabtitle" data-toggle="tab">Historical data</a>
+            </li>
+        </ul>
+        <div id="my-tab-content" class="tab-content">
+            <div class="tab-pane  active" id="tab1">
+                <h4>Path length: <span id="length"></span> </h4>
+                <div id="linechart">
+                </div>
+            </div>
+            <!--
+            <div class="tab-pane" id="tab2">
+                <div class="form-group">
+                    <h4> Select arrival time: </h4>
+                    <input id="timepicker" type="text" class="form-control">
+                </div>
+                <button id="estimate" type="button" class="btn btn-primary">Estimate</button>
+                <br>
+                <br>
+                <div class="form-group" id="rttresult">
+                    <h4> Departure time: </h4>
+                    <h4 class="important" id="departtime">7:00:00</h4>
+<!--
+                    <h4> Confidence Interval: </h4>
+                    <h4 class="important">95%</h4>                    
+                </div>
+            </div>
+            -->
+            <div class="tab-pane" id="tab2">
+                <div id="histogram"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+{% block footer %}  
+        <form id="form" class="form-inline">
+          <div class="form-group">
+              <label>
+                  <input id="pickcheck" type="checkbox"> Pick a location:
+              </label>
+              <input id="od-trigger" type="checkbox" checked disabled data-toggle="toggle" data-on="O" data-off="D" data-onstyle="success" data-offstyle="warning">  
+          </div>
+          <div class="form-group">
+              <button id="search" type="button" class="btn btn-default ">Search</button>
+              <button  id="clear" type="button" class="btn btn-default">Clear</button>
+          </div>
+        </form>
+{% endblock %}
+
+{% block js %}
+    <script src="/static/v1/lib/timepicker/jquery-ui-timepicker-addon.js"></script>
+    <script src="/static/v1/lib/timepicker/jquery-ui-timepicker-addon-i18n.min.js"></script>
+    <script src="/static/v1/lib/timepicker/jquery-ui-sliderAccess.js"></script>
+    <script src="/static/v1/odnew/initial.js"></script>
+    <script src="/static/v1/od/mapconfig.js"></script>
+    <script src="/static/v1/odnew/button.js"></script>
+    <script src="/static/v1/lib/bootstrap-toggle-master/js/bootstrap-toggle.min.js"></script>
+
+    
+    <script src="/static/v1/lib/c3/c3.min.js"></script>
+    <script src="/static/v1/odnew/linechart.js"></script>
+    <script src="/static/v1/odnew/histogram.js"></script>
+{% endblock %}

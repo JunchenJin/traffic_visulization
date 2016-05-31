@@ -1,0 +1,69 @@
+{% load staticfiles %}
+<html>
+  <head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<meta name="description" content="">
+	<meta name="author" content="">	  
+	<link href="/static/v1/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">	  
+	<link href="/static/v1/base/base.css" rel="stylesheet">
+	<link href="/static/v1/base/svg.css" rel="stylesheet">                   
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />    
+	{% block css %}{% endblock %}  
+    </head>
+    <body>
+	<div id="header">
+		<div>
+		<span id="title" class="nav-text" href="/framework">Data Demo Project</span>
+		</div>
+		<div id="navbar">
+		    <ul>
+                <!--
+                <li><a href="/tab/congestion" id="linkcongestion" class="btn btn-default">Congestion Index Map</a></li>
+                                <li><a href="/tab/od" id="linkod" class="btn btn-default">OD travel time Map</a></li>-->
+                
+                <li><a href="/tab/odnew" id="linkodnew" class="btn btn-default">Trip planning</a></li>
+                <!--
+                <li><a href="/tab/test" id="linktest" class="btn btn-default">Test with fit</a></li>
+                                <li><a href="/tab/testiframe" id="linktestiframe" class="btn btn-default">Test with iframe</a></li>-->
+                <li><a href="/tab/ci" id="linkci" class="btn btn-default">Traffic visualization</a></li>
+            </ul>
+		</div> 
+	</div>
+	<div id="mapwrap">
+      <div id="map">
+      </div>
+      <div id="menu">
+          <div id="arrowbutton">
+            <button id="menu-toggle-btn"></button>
+          </div>
+          {% block menu %}{% endblock %}
+      </div>
+    </div>
+	<div id="footer">
+	    {% block footer %}{% endblock %}
+	</div>
+  	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>		
+	<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+	<script src="/static/v1/lib/jquery/jquery.ui.touch-punch.min.js"></script>
+	<script src="/static/v1/lib/bootstrap/js/bootstrap.min.js"></script>
+	<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+	<script src="//cdn.jsdelivr.net/leaflet.esri/1.0.0/esri-leaflet.js"></script>
+	<script src="/static/v1/lib/d3/d3.min.js"></script>
+	<script  type="text/javascript">
+	   if("{{tabname}}"){
+	    $("#link"+"{{tabname}}").addClass("active");
+	    } else
+	    {
+	       $("#link"+"congestion").addClass("active");    
+	    }
+	</script>
+	    <!--the library below is to be loaded for specific apps-->
+    {% block js %}
+    {% endblock %}
+  </body>
+</html>
